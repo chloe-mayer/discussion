@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_POST["submit"])) {
-  $connexion = mysqli_connect("localhost", "root","", "reservationsalles");
+  $connexion = mysqli_connect("localhost", "root","", "discussion");
   $login = $_POST["login"];
   $password = $_POST["password"];
   $requete2 = "SELECT * FROM utilisateurs WHERE login = '" . $login . "'";

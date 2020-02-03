@@ -2,7 +2,7 @@
 session_start();
 
  
-$connexion = mysqli_connect("localhost", "root","", "reservationsalles");
+$connexion = mysqli_connect("localhost", "root","", "discussion");
 $login = $_SESSION['login'];
 $requete = "SELECT * FROM utilisateurs WHERE login =\"$login\"";
 $query = mysqli_query($connexion, $requete);

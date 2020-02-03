@@ -1,3 +1,3 @@
 <footer>
-<p>Created by Amelutsa & Devon</p> 
+<p>Created by Chloe & Devon</p> 
 </footer>

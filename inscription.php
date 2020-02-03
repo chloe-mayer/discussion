@@ -2,7 +2,7 @@
 session_start();
 
 
-$connexion = mysqli_connect("localhost", "root","", "reservationsalles");
+$connexion = mysqli_connect("localhost", "root","", "discussion");
     
 
 if(isset($_POST["submit"]))

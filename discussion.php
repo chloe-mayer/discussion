@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-if(isset($_POST['com']))
+if(isset($_POST['mes']))
 {
     $connexion = mysqli_connect("localhost","root","","discussion");
-    $requete = "INSERT INTO `discussion`.`commentaire` (`id`, `commentaire`, `id_utilisateur`, `date`) VALUES (NULL, '".$_POST['msg']."', '".$_SESSION['id']."', NOW());";
+    $requete = "INSERT INTO `discussion`.`messages` (`id`, `message`, `id_utilisateur`, `date`) VALUES (NULL, '".$_POST['msg']."', '".$_SESSION['id']."', NOW());";
     mysqli_query($connexion,$requete);
     
     //header("Location: index.php");
@@ -19,7 +19,7 @@ if(isset($_POST['com']))
 
 <head>
   <meta charset="utf-8">
-  <title>livre-or</title>
+  <title>discussion</title>
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -34,12 +34,12 @@ if(isset($_POST['com']))
 
 <section class ="BG">
 
-<form class action="livre-or.php" method="post">
+<form class action="discussion.php" method="post">
 
         <textarea name="msg" placeholder="votre commentaire">
 
         </textarea>
-        <input class="BG2" type="submit" name="com">
+        <input class="BG2" type="submit" name="mes">
 
     </form>
   <section>
@@ -61,16 +61,16 @@ if(isset($_POST['com']))
 
       $connexion = mysqli_connect("localhost","root","","discussion");
       //$requete2 = "SELECT login FROM utilisateurs INNER JOIN commentaire ON utilisateurs.id = commentaire.utilisateur_id";
-      $requete2 ="SELECT com.commentaire, com.date, u.login FROM commentaire as com inner join utilisateurs as u on u.id = com.id_utilisateur";
+      $requete2 ="SELECT mes.message, mes.date, u.login FROM messages as mes inner join utilisateurs as u on u.id = mes.id_utilisateur";
       $query = mysqli_query($connexion, $requete2);
       $resultat = mysqli_fetch_all($query);
       
 
      
     
-    foreach ($resultat as list($com,$date,$login))
+    foreach ($resultat as list($mes,$date,$login))
     {
-        echo "<tr><td>".$com."</td><td>".$login."</td><td>".$date."</td></tr>";
+        echo "<tr><td>".$mes."</td><td>".$login."</td><td>".$date."</td></tr>";
     }
     ?>
     </table>
