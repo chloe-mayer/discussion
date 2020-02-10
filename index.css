@@ -1,0 +1,292 @@
+/*_____MENU WRAP_____*/
+
+body
+{
+  background:#F1EBE2 ;
+  font-family: 'Krub', sans-serif;
+  margin:auto;
+  padding:auto;
+}
+
+a
+{
+  color:#fff;
+  text-decoration:none;
+}
+
+.material-icons
+{
+  font-size:24px;
+  margin-right:12px;
+  vertical-align:text-bottom;
+}
+
+.menu
+{
+  background:#781818;
+  color:#fff;
+  height:50px;
+  position:relative;
+  padding-top: 0.5%;
+}
+
+.menu .title
+{
+  font-size:30px;
+  font-weight:bold;
+  line-height:50px;
+  padding:0 20px;
+  text-transform:uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.menu nav
+{
+  background:inherit;
+  font-size:20px;
+  font-weight:bold;
+  height:0;
+  overflow:hidden;
+  text-transform:uppercase;
+  transition:height .2s;
+}
+
+.menu nav > *
+{
+  display:block;
+  letter-spacing:1px;
+  line-height:2.5;
+  padding:0 20px;
+  width:100%;
+}
+
+.menu nav input
+{
+  background:rgba(0,0,0,.2);
+  border:none;
+  color:#fff;
+}
+
+.menu .burger
+{
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  color:inherit;
+  cursor:pointer;
+  font-family:'Material Icons';
+  font-size:30px;
+  line-height:50px;
+  margin:0;
+  outline:0;
+  padding:0;
+  position:absolute;
+  text-align:center;
+  top:0;
+  right:10px;
+  width:50px;
+}
+
+.menu .burger:before
+{
+  content:'+';
+}
+
+.menu .burger:checked:before
+{
+  content:' ¤';
+}
+
+.menu .burger:checked + nav
+{
+  height:calc(40vh - 50px);
+}
+
+/*______CONTENU______*/
+
+section{
+	display: flex;
+
+}
+
+#gauche{
+	float: left;
+	width: 50%;
+}
+
+#droit{
+	float: right;
+	width: 50%;
+}
+
+#txt{
+	font-family: 'Krub', sans-serif;
+	color: #781818;
+	font-weight: bold;
+	font-size: 186%;
+	background-color:transparent;
+	border-radius:22px;
+	border:3px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	padding:18px 31px;
+	text-decoration:none;
+	text-shadow:0px -1px 1px #5e0d0d;
+}
+
+#txt:hover {
+	background-color:transparent;
+}
+
+.position{
+	text-align: center;
+	margin-top: 20%;
+}
+
+hr{
+	margin-top: 11%;
+    width: 2px;
+    height: 287px;
+    border: none;
+    background: #781818;
+    background-image: linear-gradient(to bottom, #F1EBE2, #781818, #F1EBE2);
+}
+
+/*______INSCRIPTION______*/
+
+#titreins{
+	text-align: center;
+	padding: 4%;
+	margin-top: 4%;
+	font-size: 200%;
+}
+
+#blockins{
+	border-radius: 60px;
+	text-align: center;	
+	width: 400px;
+    padding: 35px 20px;
+    line-height: 1.5em;
+    color: #444444;
+    background-color: #fff;
+    margin: auto;
+    box-shadow:  0px 0px 38px 3px rgba(66,66,66,0.87);
+}
+
+.formins{
+	margin-left: 8%;
+}
+
+.buttonindex{
+	margin-top: 4%;
+}
+
+/*______CONNEXION______*/
+
+.formco{
+	margin-left: 20%;
+  margin-bottom: 15%;
+}
+
+#blockco{
+	border-radius: 60px;
+	text-align: center;	
+	width: 300px;
+  padding: 35px 20px;
+  line-height: 1.5em;
+  color: #444444;
+  background-color: #fff;
+  margin: auto;
+  box-shadow:  0px 0px 38px 3px rgba(66,66,66,0.87);
+}
+
+
+/*______PROFIL______*/
+
+#modifinfo{
+  font-size: 218%;
+  padding: 5%;
+  margin-top: 4%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#titrepro{
+  text-align: center;
+  padding: 4%;
+  font-size: 200%;
+}
+
+#blockinfo{
+  display: flex;
+  border-radius: 60px;
+  text-align: center;
+  width: 1000px;
+  padding: 65px 50px;
+  color: #444444;
+  background-color: #fff;
+  margin: auto;
+  box-shadow: 0px 0px 38px 3px rgba(66,66,66,0.87);
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input{
+  width: 30%;
+  height: 30px;
+}
+
+.plop{
+  padding: 1%;
+}
+
+#klopa{
+ margin-top: 2%;
+}
+
+/*______Commentaire______*/
+
+.blok{
+  display: flex;
+}
+
+.bloke{
+  width: 50%;
+  flex-direction: column;
+  text-align: center;
+}
+
+.blokee{
+  width: 50%;
+  text-align: center;
+
+}
+
+#commentayre{
+  padding: 2%;
+  margin-left: 5%;
+}
+
+textarea{
+  width: 410px;
+  font-size: 150%;
+  height: 150px;
+}
+
+.spacecom{
+  padding: 9%;
+}
+
+th{
+  font-family: 'Josefin Sans', sans-serif;
+  color:#781818;
+}
+
+/*______FOOTER______*/
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
