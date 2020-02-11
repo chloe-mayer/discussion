@@ -9,8 +9,8 @@ if(isset($_POST["submit"]))
 {
     $login = $_POST["login"];
     $password = $_POST["password"];
-    $prenom = $_POST["prenom"];
-    $nom = $_POST["nom"];
+    /*$prenom = $_POST["prenom"];
+    $nom = $_POST["nom"];*/
     $confirmpass = $_POST["confirmpass"];
     $requete2 = "SELECT login FROM utilisateurs WHERE login = \"$login\"";
     $query = mysqli_query($connexion,$requete2);
@@ -22,7 +22,7 @@ if(isset($_POST["submit"]))
     if( !empty($resultat)) 
     {
         ?>
-        <p>Le login existe déjà !! </p>
+        <p>Ce login existe déjà !! </p>
         
         <?php
         
@@ -57,65 +57,43 @@ mysqli_close($connexion);
     <head>
         <meta charset="utf-8" />
         <title>Accueil</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.googleapis.com/css?family=Krub&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300&display=swap" rel="stylesheet">
     </head>
 
 <body>
     <?php include("header.php"); ?>
-<main>
- 
 
+    <main>
+        <article>
+            <div>
+                <h1 id="titreins">M'inscrire</h1>
+            </div>
+        </article>
 
-<h1>Inscription</h1>
+        <section id="blockins">
 
-<form method ="POST" action = "">
+            <form class="formins" method="post" action="inscription.php">
 
-    <table>
-        <tr>
-                <td align="right">
-                            <label for="login">Login :</label>
-                </td>
-                <td>
-                    <input type="text" placeholder = "Votre pseudo" id = "login" name = "login">
-                </td>
-        </tr>
-        <tr>
-                <td align="right">
-                    <label for="password">Password :</label>
-                </td>
-                <td>
-                    <input type="password"  placeholder = "Votre Mot de passe"  id = "password" name="password">
-                </td>
-        </tr>
-        <tr>
-                <td align="right">
-                    <label for="password"> confirmer Password :</label>
-                </td>
-                <td>
-                    <input type="password"  placeholder = "Confirmer Votre Mot de passe"  id = "password" name="confirmpass">
-                </td>
-        </tr>
-</br>
-        <tr>
-                <td align="right">
-                </td>
-                <td align="center">
-</br>
-                <input type="submit" name = "submit" >  
-                </td>
-        </tr>
-            
-        </table>
+                    <h2>Pseudo</h2>
+                <input type="text" placeholder = "Votre pseudo" name="login" required>
 
-</form>
+                <h2>Mot de passe</h2>
+                <input type="password" placeholder = "Votre Mot de passe" name="password" required>
 
-</div>
-</main>
+                <h2>Confirmation du mot de passe</h2>
+                <input type="password"  placeholder = "Confirmer Votre Mot de passe" name="confirmpass" required>
+                <br>
+                <input class="buttonindex" type="submit" name="submit">
+
+            </form>
+
+        </section>
+    </main>
+
 <?php include("footer.php"); ?>
 
-
-
 </body>
+
 </html>

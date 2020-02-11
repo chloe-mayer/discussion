@@ -5,14 +5,21 @@ if (isset($_SESSION['login']))
  {
 ?>
 
-<nav>
-    <ul>
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="profil.php">Profil</a></li>
-        <li><a href="discussion.php">discussion</a></li>
-        <li><a href="reservation-form.php">Réservation</a></li>
-    </ul>
-</nav>
+        <div class="menu">
+
+            <span class="title">Moulin à Parole</span>
+            <input class="burger" type="checkbox">
+
+	            <nav>
+	                <input type="search" placeholder="Rechercher...">
+	                <a href="index.php">Accueil</a>
+	        		<a href="discussion.php">Conversation</a>
+	                <a href="profil.php">Profil</a>
+                  <a href="deconnexion.php">Déconnexion</a>
+	            </nav>
+
+	        </div>
+
 <?php 
 
 }
@@ -20,17 +27,21 @@ else
  {
 ?>
 
+        <div class="menu">
 
-<nav>
-    <ul>
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="Inscription.php">Inscription</a></li>
-        <li><a href="Connexion.php">Connexion</a></li>
-        <li><a href="discussion.php">discussion</a></li>
-     </ul>
-</nav>
+            <span class="title">Moulin à Parole</span>
+            <input class="burger" type="checkbox">
 
+	            <nav>
+	                <input type="search" placeholder="Rechercher...">
+	                <a href="index.php">Accueil</a>
+	        		<a href="connexion.php">Connexion</a>
+	                <a href="inscription.php">Inscription</a>
+	            </nav>
+
+	        </div>
 <?php
  }
 ?>
+
 </header>

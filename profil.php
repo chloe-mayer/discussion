@@ -30,7 +30,7 @@ $pass2 = $_POST['mdp2'];
     if($pass==$pass2)
     {
         $mdpv2 = password_hash($pass,PASSWORD_BCRYPT, array('cost' => 12));
-        $requete = "UPDATE livreor.utilisateurs SET password =\"$mdpv2\" WHERE utilisateurs.login = \"$login\"";
+        $requete = "UPDATE discussion.utilisateurs SET password =\"$mdpv2\" WHERE utilisateurs.login = \"$login\"";
         var_dump($requete);
         $query = mysqli_query($connexion, $requete);
     }
@@ -48,7 +48,7 @@ if(isset($_POST["modifl"]))
 $login2 = $_POST['login'];
 
 
-$requete = "UPDATE livreor.utilisateurs SET login =\"$login2\" WHERE utilisateurs.login = \"$login\"";
+$requete = "UPDATE discussion.utilisateurs SET login =\"$login2\" WHERE utilisateurs.login = \"$login\"";
 var_dump($requete);
 $query = mysqli_query($connexion, $requete);
 $_SESSION['login'] = $login2;
@@ -67,60 +67,64 @@ echo "votre login a bien été modifier";
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Accueil</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker&display=swap" rel="stylesheet">
+        <title>Profil</title>
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.googleapis.com/css?family=Krub&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300&display=swap" rel="stylesheet">
     </head>
 
 <body>
+
     <?php include("header.php"); ?>
 
-<main>
+    <main>
 
-    <h2>Bienvenue dans votre espace <?php echo $login;?></h2>
+    <h2 id="modifinfo">Bienvenue dans votre espace <?php echo $login;?></h2>
 
-    <div class="gradient5">
-<table>
-<thead>
-    <tr>
-        <th>login</th>
-    </tr>
-<thead>
-    <tbody>
-    <tr>
-        <td><?php echo $login; ?></td>
-    </tr>
-    </tbody>
-</table>
+        <form class="formulaire" method="post" action="profil.php">
 
-    </div>
+            <article>
+              <div>
+                <h1 id="titrepro">Modifier vos infos</h1>
+              </div>
+            </article>
 
-    <div class="gradient5">
+            <section id="blockinfo">
 
-    <form class="formulaire" method="post" action="profil.php">
+                    <form class="formco" method="post" action="connexion.php">
 
-        <h2>Modifier vos info</h2>
+                    <article>
 
-        <label for="login">Modifier login:</label>
-        <input type="text" minlength="5" required name="login" id="login" value="<?php echo $login; ?>">
+                    <div class="plop">
+                        <h2>Modifier votre login:</h2>
+                        <input type="text" class="input" required name="login" value="<?php echo $login; ?>">
+                    </div>
 
-        <input type="submit" name="modifl" id="submit" value="Envoyer">
+                    <div class="plop">        
+                        <h2>Modifier votre mot de passe:</h2>
+                        <input type="text" class="input" required name="mdp" placeholder="">
+                    </div>
 
-    </form>
-       
-    <form class="formulaire" method="post" action="profil.php">
-        <label for="mdp">Modifier Password:</label>
-        <input type="text" minlength="5" required name="mdp" id="mdp" placeholder="">
-        
-        <label for="mdp2">Confirmer Password:</label>
-        <input type="text" minlength="5" required name="mdp2" id="mdp2" placeholder="">
-        
-        
-        <input type="submit" name="modifp" id="submit" value="Envoyer">
-</form>
-    </div>
-</main>
+
+                    <div class="plop">
+                        <h2>Confirmer votre mot de passe:</h2>
+                        <input type="text" class="input" required name="mdp2" placeholder="">
+                    </div>
+
+                    </article>
+
+                    <article id="klopa">
+
+                        <input class="input" type="submit" name="modifp" value="Envoyer">
+
+                    </article>
+
+                    </form>
+
+            </section>
+
+    </main>
+
 </body>
 
 

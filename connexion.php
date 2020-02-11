@@ -30,9 +30,9 @@ if (isset($_POST["submit"])) {
     <head>
         <meta charset="utf-8" />
         <title>Accueil</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.googleapis.com/css?family=Krub&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300&display=swap" rel="stylesheet">
     </head>
 
 <body>
@@ -40,24 +40,27 @@ if (isset($_POST["submit"])) {
 
 <main>
  
-  <div>
+    <article>
+      <div>
+        <h1 id="titreins">Connexion</h1>
+      </div>
+    </article>
 
-  <form method="POST" action="connexion.php">
-    
-  <p>
+    <section id="blockco">
 
-    <label>Login</label>
-    <input type="text" name="login">
+      <form class="formco" method="post" action="connexion.php">
 
-    <label>Password</label>
-    <input type="password" name="password">
-    </br>
-    </p>
+        <h2>Pseudo</h2>
+        <input type="text" value="login" name="login" required>
+        <h2>Mot de passe</h2>
+        <input type="password" value="password" name="password" required>
+        <br>
+        <input class="buttonindex" type="submit" value="Connexion" name="submit">
 
-    <input type="submit" name="submit">
-  
-  </form>
-  </div>
+      </form>
+       
+    </section>
+
   </main>
   
   <?php include("footer.php"); ?>
