@@ -10,7 +10,9 @@
 
 <body>
 
-<?php include("header.php"); ?>
+<?php
+session_start();
+include("header.php");?>
 
     <main>
 
@@ -61,9 +63,3 @@ else
 </html>
 
 
-<?php
-session_start();
-unset($_SESSION);
-session_destroy();
-
-?>

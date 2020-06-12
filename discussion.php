@@ -58,10 +58,11 @@ $resultat = mysqli_fetch_all($query);
         </form>
 
     </section>
+</br>
 
     <section class="blokee">
 
-    <table id="AD">
+    <table >
         <thead>
     <tr>
         <th class="spacecom">Commentaire</th>

@@ -211,6 +211,8 @@ hr{
 }
 
 #titrepro{
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 4%;
   font-size: 200%;
@@ -248,19 +250,22 @@ hr{
 
 .blok{
   display: flex;
+  flex-direction: column;
 }
 
 .bloke{
-  width: 50%;
+  width: 100%;
   flex-direction: column;
   text-align: center;
 }
 
 .blokee{
-  width: 50%;
+  width: 100%;
   text-align: center;
+  flex-direction: column;
 
 }
+
 
 #commentayre{
   padding: 2%;
