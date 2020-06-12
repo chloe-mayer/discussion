@@ -52,13 +52,15 @@ $resultat = mysqli_fetch_all($query);
         <form id="messages" action="" method="POST">
 
             <textarea name="msg" placeholder="Du Grain a Moudre?!?"></textarea>
+</br></br>
 
             <input class="BG2" type="submit" name="mes">
 
         </form>
 
     </section>
-</br>
+
+<hr>
 
     <section class="blokee">
 
@@ -68,6 +70,7 @@ $resultat = mysqli_fetch_all($query);
         <th class="spacecom">Commentaire</th>
         <th class="spacecom">Prenom</th>
         <th class="spacecom">Date</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>

@@ -1,47 +1,44 @@
 <header>
-<?php
+	<?php
 
-if (isset($_SESSION['login']))
- {
-?>
+	if (isset($_SESSION['login'])) {
+	?>
 
-        <div class="menu">
+		<div class="menu">
 
-            <span class="title">Moulin à Parole</span>
-            <input class="burger" type="checkbox">
+			<span class="title">Moulin à Parole</span>
+			<input class="burger" type="checkbox">
 
-	            <nav>
-	                <input type="search" placeholder="Rechercher...">
-	                <a href="index.php">Accueil</a>
-	        		<a href="discussion.php">Conversation</a>
-	                <a href="profil.php">Profil</a>
-                  <a href="deconnexion.php">Déconnexion</a>
-	            </nav>
+			<nav>
+				<input type="search" placeholder="Rechercher...">
+				<a href="index.php">Accueil</a>
+				<a href="discussion.php">Conversation</a>
+				<a href="profil.php">Profil</a>
+				<a href="deconnexion.php">Déconnexion</a>
+			</nav>
 
-	        </div>
+		</div>
 
-<?php 
+	<?php
 
-}
-else
- {
-?>
+	} else {
+	?>
 
-        <div class="menu">
+		<div class="menu">
 
-            <span class="title">Moulin à Parole</span>
-            <input class="burger" type="checkbox">
+			<span class="title">Moulin à Parole</span>
+			<input class="burger" type="checkbox">
 
-	            <nav>
-	                <input type="search" placeholder="Rechercher...">
-	                <a href="index.php">Accueil</a>
-	        		<a href="connexion.php">Connexion</a>
-	                <a href="inscription.php">Inscription</a>
-	            </nav>
+			<nav>
+				<input type="search" placeholder="Rechercher...">
+				<a href="index.php">Accueil</a>
+				<a href="connexion.php">Connexion</a>
+				<a href="inscription.php">Inscription</a>
+			</nav>
 
-	        </div>
-<?php
- }
-?>
+		</div>
+	<?php
+	}
+	?>
 
 </header>
